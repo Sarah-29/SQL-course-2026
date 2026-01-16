@@ -65,3 +65,26 @@ SELECT
 
 SELECT Distinct Ethnicity FROM PatientStay
 
+
+
+-- Patients per hospital
+SELECT
+    Hospital,
+    COUNT(*) AS NumPatients
+FROM PatientStay
+GROUP BY Hospital
+ORDER BY NumPatients DESC
+
+SELECT
+    Hospital,
+    COUNT(DISTINCT PatientId) AS NumPatients
+FROM PatientStay
+GROUP BY Hospital
+ORDER BY NumPatients DESC
+
+-- Number of ethnicities
+SELECT
+    COUNT(DISTINCT Ethnicity) AS NumEthnicities
+FROM PatientStay
+
+SELECT Distinct Ethnicity FROM PatientStay
