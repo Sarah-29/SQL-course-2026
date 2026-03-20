@@ -240,7 +240,11 @@ In the case of ties return the patient with the lowest PatientId.
 The CTE is necessary here since we cannot put a Window function into a WHERE clause
 **/
 
-WITH RankedPatient (PatientId,Hospital,Tariff,PatientRank)
+
+
+
+WITH 
+RankedPatient (PatientId,Hospital,Tariff,PatientRank)
 AS (
 SELECT
 	PatientId
